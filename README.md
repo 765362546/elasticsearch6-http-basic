@@ -1,6 +1,5 @@
 
-[![Build Status](https://travis-ci.org/Cleafy/elasticsearch6-http-basic.svg?branch=master)](https://github.com/Cleafy/elasticsearch6-http-basic)
-
+forked from https://github.com/v2future/elasticsearch6-http-basic
 
 # HTTP Basic auth for ElasticSearch 6.x
 
@@ -16,12 +15,8 @@ There is no way to configure this on a per index basis.
 
 |     Http Basic Plugin       | elasticsearch                |
 |-----------------------------|------------------------------|
-| v1.0.0                      |                       6.2.4+ |
+| v1.0.0                      |                       6.5.2 |
 
-
-## Installation
-
-Download the desired version from https://github.com/Cleafy/elasticsearch6-http-basic/releases and copy it to `plugins/http-basic`.
 
 ## Configuration
 
@@ -47,7 +42,8 @@ see [this article](https://en.wikipedia.org/wiki/Basic_access_authentication)
 The following code enables plugin logging, sets user and password.提醒：属性的:后面需要加一个空格！！！
 
 ```
-http.basic.enable: true
+xpack.security.enabled: false
+http.basic.enabled: true
 http.basic.log: true
 http.basic.username: "some_user"
 http.basic.password: "some_password"
@@ -71,7 +67,4 @@ $ curl -v --user my_username:password no_local_host:9200/foo       # returns 401
 ```
 
 
-## Issues
 
-Please file your issue here: 
-https://github.com/Cleafy/elasticsearch6-http-basic/issues
